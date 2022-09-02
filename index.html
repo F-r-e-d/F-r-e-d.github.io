@@ -10,7 +10,7 @@
 	font-family: arial;
 	color: #FFF;
 	height: 100%;
-  background-image: linear-gradient(-105deg, #009acc, #363795)
+  background-image: linear-gradient(-105deg, #009acc, #363795);
 }
     </style>
 <body>
@@ -46,6 +46,7 @@ const {ipcRenderer} = require('electron');
   ipcRenderer.on('progress', function(event, text) {
      var progress = document.getElementById('progress');
   progress.setAttribute('value', text);
+	  console.log(text);
     if(+text > 0) {
         spinner.style.display = "none";
     }
