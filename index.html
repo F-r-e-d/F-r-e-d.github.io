@@ -10,8 +10,10 @@
 	font-family: arial;
 	color: #FFF;
 	height: 100%;
-background: rgb(47,137,117);
-background: linear-gradient(0deg, rgba(47,137,117,1) 0%, rgba(0,120,163,1) 100%);
+	background: rgb(47,137,117);
+	background: linear-gradient(0deg, rgba(47,137,117,1) 0%, rgba(0,120,163,1) 100%);
+	background-repeat: no-repeat;
+    	background-size: cover;
 }
     </style>
 <body>
@@ -41,7 +43,7 @@ background: linear-gradient(0deg, rgba(47,137,117,1) 0%, rgba(0,120,163,1) 100%)
   var spinner = document.getElementById('spinner');
 
 // Listen for messages
-const {ipcRenderer} = require('electron');
+	const {ipcRenderer} = require('electron');
   
   // Progress
   ipcRenderer.on('progress', function(event, text) {
