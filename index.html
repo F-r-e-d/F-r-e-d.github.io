@@ -41,7 +41,7 @@
 let version = window.location.hash.substring(1);
 document.getElementById('version').innerText = version;
   
-  const spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('spinner');
 
   
 
@@ -51,7 +51,7 @@ const {ipcRenderer} = require('electron');
   // Progress
   ipcRenderer.on('progress', function(event, text) {
      var progress = document.getElementById('progress');
-  progress.setAttribute('value', text)
+  progress.setAttribute('value', text);
     if(+text > 0) {
         spinner.style.display = "none";
     }
