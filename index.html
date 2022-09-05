@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Mise à jour</title>
+	<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
 </head>
   <style>
 body {
@@ -89,8 +90,18 @@ progress[value]::-webkit-progress-value::before {
 	</div>
   		
 		<progress id="progress" max="100" value="0"> 70% </progress>
+	
+	<div
+	  class="ldBar"
+	     id="progress2"
+	     data-value="50"
+	  data-stroke="data:ldbar/res,
+	  gradient(0,1,#f99,#ff9)"
+	></div>
   		
 	<p class="mt_50">Veuillez patienter pendant l'installation</p>
+
+	<script type="text/javascript" src="loading-bar.js"></script>
 <script>
   
   var spinner = document.getElementById('spinner');
@@ -100,9 +111,13 @@ progress[value]::-webkit-progress-value::before {
   
   // Progress
   ipcRenderer.on('progress', function(event, text) {
+	  
      var progress = document.getElementById('progress');
   progress.setAttribute('value', text);
-	  console.log(text);
+	  
+	  var progress2 = document.getElementById('progress2');
+	  progress.setAttribute('data-value', text);
+
     if(+text > 0) {
         spinner.style.display = "none";
     }
