@@ -8,8 +8,8 @@ body {
 	text-align: center;
 	margin-top: 100px;
 	font-family: arial;
-	color: #FFF;
-	background: "#F0F0F0";
+	//color: #FFF;
+	background: #F0F0F0;
 	//background: rgb(47,137,117);
 	//background: linear-gradient(0deg, rgba(47,137,117,1) 0%, rgba(0,120,163,1) 100%);
 	background-attachment: fixed;
@@ -19,7 +19,7 @@ body {
 #spinner {
 	position: absolute;
     	top: 49%;
-    	left: 49%;
+    	left: 48%;
 }
 progress#progress[value] {
     width: 300px;
@@ -59,7 +59,7 @@ progress[value]::-webkit-progress-value::before {
   top: -125%;
 }
 	  
-.margin_50 {
+.mt_50 {
 	margin-top: '50px';
 }
 
@@ -82,13 +82,15 @@ progress[value]::-webkit-progress-value::before {
     </g>
 </svg>
 
-	<h3>Une Mise à jour est disponible</h3>
-		<h5>Veuillez patienter pendant l'installation</h5>
-	<div class="margin_50">
+	<h4>Une mise à jour est disponible</h4>
+
+	<div class="mt_50">
   		<small>Téléchargement</small>
 	</div>
-  <progress id="progress" max="100" value="0"> 70% </progress>
-  
+  		
+		<progress id="progress" max="100" value="0"> 70% </progress>
+  		
+	<p class="mt_50">Veuillez patienter pendant l'installation</p>
 <script>
   
   var spinner = document.getElementById('spinner');
