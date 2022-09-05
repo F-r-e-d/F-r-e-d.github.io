@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mise à jour Sereine</title>
+  <title>Mise à jour</title>
 </head>
   <style>
 body {
@@ -23,7 +23,7 @@ body {
 progress#progress[value] {
     width: 300px;
     max-width: 80%;
-    height: 42px;
+    height: 20px;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -57,6 +57,11 @@ progress[value]::-webkit-progress-value::before {
   right: 0;
   top: -125%;
 }
+	  
+.margin_50 {
+	margin-top: '50px';
+}
+
     </style>
 <body>
 <svg id="spinner" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
@@ -78,7 +83,9 @@ progress[value]::-webkit-progress-value::before {
 
 	<h3>Une Mise à jour est disponible</h3>
 		<h5>Veuillez patienter pendant l'installation</h5>
-  	<p>Progression du téléchargement de la MAJ</p>
+	<div class="margin_50">
+  		<small>Téléchargement</small>
+	</div>
   <progress id="progress" max="100" value="0"> 70% </progress>
   
 <script>
